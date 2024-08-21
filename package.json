@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "src/index.js",
   "scripts": {
+    "beautifull": "Lint-staged",
     "start": "nodemon --inspect src/index.js",
-    "watch":"node-sass --watch src/resources/scss/ --output src/public/css/",
+    "watch": "node-sass --watch src/resources/scss/ --output src/public/css/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,14 +18,20 @@
     "url": "https://github.com/duckien-o/nodejs_blog/issues"
   },
   "homepage": "https://github.com/duckien-o/nodejs_blog#readme",
+  "Lint-staged":{
+    "src/**/*.{js,json,scss}": "prettier --single-quoye --trailing-comma all --tab-width 4 --write"
+  },
   "description": "",
   "dependencies": {
     "express": "^4.19.2",
     "express-handlebars": "^8.0.1"
   },
   "devDependencies": {
+    "husky": "^9.1.4",
+    "lint-staged": "^15.2.9",
     "morgan": "^1.10.0",
     "node-sass": "^9.0.0",
-    "nodemon": "^3.1.4"
+    "nodemon": "^3.1.4",
+    "prettier": "^3.3.3"
   }
 }
