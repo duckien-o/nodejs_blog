@@ -18,13 +18,14 @@
     "url": "https://github.com/duckien-o/nodejs_blog/issues"
   },
   "homepage": "https://github.com/duckien-o/nodejs_blog#readme",
-  "Lint-staged":{
+  "Lint-staged": {
     "src/**/*.{js,json,scss}": "prettier --single-quoye --trailing-comma all --tab-width 4 --write"
   },
   "description": "",
   "dependencies": {
     "express": "^4.19.2",
-    "express-handlebars": "^8.0.1"
+    "express-handlebars": "^8.0.1",
+    "mongoose": "^8.5.4"
   },
   "devDependencies": {
     "husky": "^9.1.4",

@@ -1,0 +1,94 @@
+<form action="/search">
+ <nav class="navbar navbar-expand-lg bg-dark navbar-dark ">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="mt_4">
+        <div class="row">
+   
+
+              {{#each courses}}
+              
+              <div class="col-sm-6 col-lg-4">
+                  <div class="card card-course-item">
+                     <a href="/course/{{this.slug}}">  
+                     <img src="{{this.image}}" class="card-img-top" alt="...">
+                     </a>
+                      
+                      <div class="card-body">
+                        <a href="/course/{{this.slug}}">
+                        <h5 class="card-title">{{this.name}}</h5>
+                        </a>
+                        
+                        <p class="card-text">{{this.description}}</p>
+                        <a href="#" class="btn btn-primary">mua </a>
+                      </div>
+                    </div>
+                 
+              </div>
+              {{/each}}
+
+        </div>
+    </div>
+<div class="mt-4">
+
+    <form method="GET" action="/news">
+  <div class="form-group">
+    <label for="exampleInputEmail1">nhap vao từ khoá </label>
+    
+    <input type="text" name="q" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="click vào đây ">
+    </div>
+
+    {{!-- phân cacsh  --}}
+    
+<div class="form-group">
+    <label for="gender-input" >giới tính  </label>
+    <select name="gender" class="form-control mt-4" id="gender-input">
+            <option value="">---giới tính---</option>
+            <option value="male">NAM</option>
+            <option value="female">Nữ </option>
+
+    </select>
+  
+</div>
+
+    
+    
+
+  
+  <button type="submit" class="btn btn-primary mt-4 ">Submit</button>
+</form> 
+</div>
